@@ -11,7 +11,7 @@ public class Quote {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer quote;
+    private String quote;
 
     public Integer getId() {
         return id;
@@ -21,7 +21,7 @@ public class Quote {
         return quote;
     }
 
-    public void setQuote(Integer quote) {
+    public void setQuote(String quote) {
         this.quote = quote;
     }
 }
