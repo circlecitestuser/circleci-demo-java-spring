@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     # Remove if parallelism is not desired
@@ -58,7 +58,7 @@ jobs:
       - store_artifacts:
           path: build/libs
 workflows:
-  version: 2
+  version: 2.1
   workflow:
     jobs:
     - build
