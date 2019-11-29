@@ -60,7 +60,7 @@ jobs:
       - store_artifacts:
           path: build/libs
       - slack/status:
-          channel: 'CR3E15EVB'
+          channel: CR3E15EVB
           mentions: 'UQZA86W2K'
 workflows:
   version: 2.1
@@ -68,9 +68,10 @@ workflows:
     jobs:
     - build
     - slack/approval-notification:
-      channel: 'CR5A81WG7'
+      channel: CR5A81WG7
       mentions: 'UQZA86W2K'
-      message: "環境配備のため承認お願いします。"
+      #message: "環境配備のため承認お願いします。"
+      message: 'test'
     - deploy:
         requires:
           - appoval-deploy
