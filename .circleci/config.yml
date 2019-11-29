@@ -71,6 +71,6 @@ workflows:
       #channel: 'CR5A81WG7'
       #mentions: 'UQZA86W2K'
       #message: "環境配備のため承認お願いします。"
-    - deploy:
-        requires:
-          - appoval-deploy
+    #- deploy:
+        #requires:
+          #- appoval-deploy
