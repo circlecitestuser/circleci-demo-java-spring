@@ -67,10 +67,10 @@ workflows:
   workflow:
     jobs:
     - build
-    #- slack/approval-notification:
-      #channel: 'CR5A81WG7'
-      #mentions: 'UQZA86W2K'
-      #message: "環境配備のため承認お願いします。"
-    #- deploy:
-        #requires:
-          #- appoval-deploy
+    - slack/approval-notification:
+      channel: 'CR5A81WG7'
+      mentions: 'UQZA86W2K'
+      message: "環境配備のため承認お願いします。"
+    - deploy:
+        requires:
+          - appoval-deploy
