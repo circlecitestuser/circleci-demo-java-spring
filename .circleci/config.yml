@@ -59,19 +59,18 @@ jobs:
       # This will be empty for all nodes except the first one
       - store_artifacts:
           path: build/libs
-      - slack/status:
-          channel: CR3E15EVB
-          mentions: 'UQZA86W2K'
+      #- slack/status:
+          #channel: CR3E15EVB
+          #mentions: 'UQZA86W2K'
 workflows:
   version: 2.1
   workflow:
     jobs:
     - build
     - slack/approval-notification:
-      channel: CR5A81WG7
+      channel: 'CR5A81WG7'
       mentions: 'UQZA86W2K'
-      #message: "環境配備のため承認お願いします。"
-      message: 'test'
+      message: "環境配備のため承認お願いします。"
     - deploy:
         requires:
           - appoval-deploy
