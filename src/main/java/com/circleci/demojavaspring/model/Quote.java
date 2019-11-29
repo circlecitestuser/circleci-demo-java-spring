@@ -1,3 +1,5 @@
+//コメント追加
+
 package com.circleci.demojavaspring.model;
 
 import javax.persistence.Entity;
