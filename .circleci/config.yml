@@ -70,9 +70,9 @@ workflows:
         requires:
           - appoval-build
     - slack/approval-notification:
-      channel: 'CR5A81WG7'
-      mentions: 'UQZA86W2K'
-      message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
+        channel: 'CR5A81WG7'
+        mentions: 'UQZA86W2K'
+        message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
         requires:
           - build
         context: dev
