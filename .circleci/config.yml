@@ -66,13 +66,10 @@ workflows:
   version: 2.1
   workflow:
     jobs:
-    - build:
-        requires:
-          - appoval-build
-    - slack/approval-notification:
-        channel: 'CR5A81WG7'
-        mentions: 'UQZA86W2K'
-        message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
-        requires:
-          - build
-        context: dev
+      - build:
+      - slack/approval-notification:
+          channel: 'CR5A81WG7'
+          mentions: 'UQZA86W2K'
+          message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
+          requires:
+            - build
