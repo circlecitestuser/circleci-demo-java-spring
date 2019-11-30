@@ -62,7 +62,7 @@ jobs:
       - slack/status:
           channel: 'CR3E15EVB'
           mentions: 'UQZA86W2K'
-          webhook: https://hooks.slack.com/services/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
+          webhook: https://hooks.slack.com/services/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
 workflows:
   version: 2.1
   workflow:
@@ -71,7 +71,8 @@ workflows:
           channel: 'CR5A81WG7'
           mentions: 'UQZA86W2K'
           message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
-          webhook: https://hooks.slack.com/services/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
+          webhook: https://hooks.slack.com/services/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
+          type: approval
       - build:
           requires:
             - slack/approval-notification
