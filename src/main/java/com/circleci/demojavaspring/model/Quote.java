@@ -13,13 +13,13 @@ public class Quote {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
-    private String quote;
+    private Integer quote;
 
     public Integer getId() {
         return id;
     }
 
-    public String getQuote() {
+    public Integer getQuote() {
         return quote;
     }
 
