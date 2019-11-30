@@ -71,7 +71,6 @@ workflows:
       - slack/approval-notification:
           channel: 'CQXFHC0TX' #circleci_test
           message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
-          #webhook: https://hooks.slack.com/services/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
           webhook: '${SLACK_WEBHOOK}'
       - build:
           type: approval
