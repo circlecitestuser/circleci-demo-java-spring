@@ -75,3 +75,4 @@ workflows:
       message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
         requires:
           - build
+        context: dev
