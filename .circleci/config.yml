@@ -60,18 +60,18 @@ jobs:
       - store_artifacts:
           path: build/libs
       - slack/status:
-          channel: 'CR3E15EVB'
+          #channel: 'CR3E15EVB'
           mentions: 'UQZA86W2K'
-          webhook: https://hooks.slack.com/services/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
+          #webhook: https://hooks.slack.com/services/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
 workflows:
   version: 2.1
   workflow:
     jobs:
       - slack/approval-notification:
-          channel: 'CR5A81WG7'
+          #channel: 'CR5A81WG7'
           #mentions: 'UQZA86W2K'
           message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
-          webhook: https://hooks.slack.com/services/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
+          #webhook: https://hooks.slack.com/services/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
       - build:
           type: approval
           requires:
