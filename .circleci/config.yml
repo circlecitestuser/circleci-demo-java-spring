@@ -69,10 +69,10 @@ workflows:
     jobs:
       - slack/approval-notification:
           channel: 'CR5A81WG7'
-          mentions: 'UQZA86W2K'
+          #mentions: 'UQZA86W2K'
           message: ${CIRCLE_BRANCH}ビルド実施のため承認をお願いします。
           webhook: https://hooks.slack.com/services/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
-          type: approval
       - build:
+          type: approval
           requires:
             - slack/approval-notification
